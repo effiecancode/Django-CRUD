@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==4.0"
+django-admin-cli = "==0.1.1"
+djangorestframework = "==3.15.1"
+psycopg2 = "==2.9.9"
+sqlparse = "==0.5.0"
+python-dotenv = "==0.19.0"
+aurora-dsql-django = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"

@@ -10,10 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
+import sys
 from pathlib import Path
 
-import dotenv
-dotenv.load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -30,9 +29,6 @@ SECRET_KEY = 'django-insecure--vqfmga^q$%am2_2tz4js%*mwn6mu%zxhnpx7f11(ikf)dtd1m
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'eventshub-dev-alb-1406608266.us-east-1.elb.amazonaws.com',
-    '127.0.0.1',
-    'localhost',
     '*',
 ]
 
@@ -93,17 +89,16 @@ WSGI_APPLICATION = 'Hub.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-
-
 DATABASES = {
     'default': {
-        'ENGINE': 'aurora_dsql_django',
+        'HOST': 'uiabtxahshv6at5pcfidcxfnbq.dsql.us-east-1.on.aws',
         'NAME': 'postgres',
         'USER': 'admin',
-        'HOST': 'uiabtxahshv6at5pcfidcxfnbq.dsql.us-east-1.on.aws',
+        'ENGINE': 'aurora_dsql_django',
         'OPTIONS': {
             'sslmode': 'require',
-            'region': 'us-east-1',
+            'region': 'us-east-2',
+            'expires_in': 60
         }
     }
 }
