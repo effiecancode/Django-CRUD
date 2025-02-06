@@ -11,3 +11,13 @@ def generate_aurora_token(endpoint, region):
 # region = "us-east-1"
 
 # generate_aurora_token(endpoint, region)
+
+
+# PGSSLMODE=require \
+# psql --dbname postgres \
+#     --username admin \
+#     --host z4abtxahshtsf3garatpdmzbai.dsql.us-east-2.on.aws
+
+# aws rds modify-db-cluster \
+# >     --db-cluster-identifier uiabtxahshv6at5pcfidcxfnbq \
+# >     --vpc-security-group-ids sg-0dc124aadcd8c25ba

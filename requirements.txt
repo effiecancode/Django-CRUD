@@ -4,3 +4,7 @@ djangorestframework==3.15.1
 psycopg2==2.9.9
 sqlparse==0.5.0
 python-dotenv==0.19.0
+
+aurora_dsql_django
+boto3>=1.35.74
+botocore>=1.35.74

@@ -32,9 +32,9 @@ ALLOWED_HOSTS = [
     '*',
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://eventshub-dev-alb-1406608266.us-east-1.elb.amazonaws.com'
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     'https://eventshub-dev-alb-1406608266.us-east-1.elb.amazonaws.com'
+# ]
 
 # Application definition
 
@@ -91,18 +91,21 @@ WSGI_APPLICATION = 'Hub.wsgi.application'
 
 DATABASES = {
     'default': {
-        'HOST': 'uiabtxahshv6at5pcfidcxfnbq.dsql.us-east-1.on.aws',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
         'USER': 'admin',
-        'ENGINE': 'aurora_dsql_django',
-        'OPTIONS': {
-            'sslmode': 'require',
-            'region': 'us-east-2',
-            'expires_in': 60
-        }
+        'PASSWORD': 'postgres',
+        'HOST': 'django-crud-db.clckiq4e84gy.us-west-2.rds.amazonaws.com',
+        'PORT': 5432,
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
